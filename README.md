@@ -1,50 +1,55 @@
-# ABC: A Transcriptome-Gated Anti-inflammatory Immune Circuit
+# Adaptive Biocomputational Control (ABC)
 
 ## Overview
-Inflammatory diseases span autoimmune disorders, infections, cancer, and sepsis. However, current anti-inflammatory therapies are often applied uniformly without accounting for patient-specific immune states.
+Adaptive Biocomputational Control (ABC) is a systems immunology framework that models immune responses as logic-gated control systems rather than isolated gene expression changes.
 
-This project proposes **ABC**, a transcriptome-gated synthetic immune circuit that activates an anti-inflammatory response **only when a specific inflammatory context is detected**.
-
-ABC integrates:
-- Boolean logic for immune-state sensing
-- Human transcriptomic data
-- Stochastic simulation of downstream IL-10 dynamics
+The framework distinguishes **regulatory** and **effector** immune dominance using interpretable cytokine logic and tests robustness under biological noise using stochastic simulations.
 
 ---
 
 ## Core Idea
-The ABC circuit activates IL-10 only when:
-- TNF is high  
-- IL-6 is high  
-- IFN-γ is low  
+Immune behavior is treated as a **state-based decision system** governed by interacting cytokines:
 
-This logic is designed to detect unresolved inflammatory states while avoiding blanket immunosuppression.
+- Cytokines act as input signals
+- Logic-gated rules define immune state transitions
+- Regulatory and effector programs act as mutually exclusive control modules
+- Stochastic dynamics are used to assess robustness
+
+This moves beyond descriptive transcriptomics toward **mechanistic immune decision modeling**.
 
 ---
 
 ## Datasets Used
-| Disease Context | GEO Accession |
-|----------------|--------------|
-| Inflammatory bowel disease | GSE100833 |
-| COVID-19 | GSE157103 |
-| Sepsis | GSE65682 |
+The framework is evaluated across distinct immune contexts:
 
----
+- **Inflammatory Bowel Disease (GSE100833)**  
+  Chronic tissue inflammation with regulatory–effector imbalance
 
-## Key Findings
-- ABC activation is rare (<1% of samples), indicating high specificity
-- Activation is context-dependent rather than disease-wide
-- Stochastic simulations show robust IL-10 induction once the circuit is triggered
+- **COVID-19 PBMCs (GSE157103)**  
+  IFN-γ–dominated effector immune activation
+
+- **Melanoma under Immunotherapy (GSE165278)**  
+  Effector reactivation versus immune exhaustion
+
+Each dataset is processed independently to preserve biological context.
 
 ---
 
 ## Repository Structure
-- `notebooks/` – analysis pipeline
-- `figures/` – manuscript-ready figures
-- `results/` – ABC activation outputs
-- `environment.yml` – reproducible environment
+
+- Dataset notebooks perform immune state classification
+- Stochastic and cross-disease analyses are handled separately
 
 ---
 
-## Status
-This repository supports a manuscript prepared for preprint submission.
+## Planned Extensions
+- Data-calibrated logic using interpretable machine learning
+- Expanded cytokine networks
+- Multi-layer immune control modeling
+
+---
+
+## Author
+Shravani B.S. Bollapragada  
+Independent Undergraduate Researcher
+
