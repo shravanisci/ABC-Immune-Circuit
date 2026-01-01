@@ -5,8 +5,8 @@ Adaptive Biocomputational Control (ABC) is a systems immunology framework that m
 
 The framework distinguishes **regulatory** and **effector** immune dominance using interpretable cytokine logic and tests robustness under biological noise using stochastic simulations.
 
-## Status: Research framework and exploratory analysis (ongoing)
-This repository contains dataset-specific notebooks implementing the ABC immune control framework described in the accompanying LinkedIn post. Code is modular, exploratory, and intended to demonstrate conceptual validity rather than final optimization.
+Status: Research framework and exploratory analysis (ongoing)
+*This repository contains dataset-specific notebooks implementing the ABC immune control framework described in the accompanying LinkedIn post. Code is modular, exploratory, and intended to demonstrate conceptual validity rather than final optimization.*
 ---
 
 ## Core Idea
